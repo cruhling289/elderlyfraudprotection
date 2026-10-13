@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pause First: Staying safe online, in plain English</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F5F8FB;--ink:#14233B;--muted:#3B4D68;--card:#fff;--line:#BFCBDB;--btn:#14233B;--btnink:#fff;--safe:#0B6B57;--safe-bg:#E1F3EE;--warn:#A8261C;--warn-bg:#FBE7E4;--focus:#0B57D0;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1726;--ink:#EEF2F8;--muted:#B7C3D6;--card:#17233A;--line:#37496B;--btn:#EEF2F8;--btnink:#0E1726;--safe:#6FD9BC;--safe-bg:#0F3A31;--warn:#FF9B90;--warn-bg:#47201C;--focus:#8AB4FF}}
+:root[data-theme="dark"]{--bg:#0E1726;--ink:#EEF2F8;--muted:#B7C3D6;--card:#17233A;--line:#37496B;--btn:#EEF2F8;--btnink:#0E1726;--safe:#6FD9BC;--safe-bg:#0F3A31;--warn:#FF9B90;--warn-bg:#47201C;--focus:#8AB4FF}
+html{font-size:18px;scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Atkinson Hyperlegible",Verdana,Tahoma,sans-serif;line-height:1.6}
+*{box-sizing:border-box}
+:focus-visible{outline:4px solid var(--focus);outline-offset:3px}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1.1rem}
+header{border-bottom:2px solid var(--line)}
+.bar{display:flex;flex-wrap:wrap;gap:.8rem 1.5rem;align-items:center;justify-content:space-between;padding:.9rem 0}
+.brand{font-weight:700;font-size:1.35rem;text-decoration:none;color:var(--ink)}
+nav{display:flex;flex-wrap:wrap;gap:.3rem 1.2rem}
+nav a{color:var(--ink);font-weight:700}
+.size{display:flex;align-items:center;gap:.4rem;font-weight:700}
+.size button{font:inherit;font-weight:700;min-width:3rem;min-height:2.8rem;border:2px solid var(--ink);background:var(--card);color:var(--ink);border-radius:.5rem;cursor:pointer}
+.size button[aria-pressed="true"]{background:var(--btn);color:var(--btnink)}
+h1{font-size:2.3rem;line-height:1.15;margin:2.2rem 0 .8rem;letter-spacing:-.01em}
+h2{font-size:1.65rem;line-height:1.25;margin:3rem 0 .8rem}
+p{margin:0 0 1rem;max-width:40rem}
+.lede{font-size:1.2rem;color:var(--muted)}
+.quiz{background:var(--card);border:3px solid var(--ink);border-radius:1rem;padding:1.3rem;margin:1.6rem 0}
+.qhead{display:flex;justify-content:space-between;gap:1rem;font-weight:700;color:var(--muted);margin-bottom:.8rem}
+.msg{border-left:8px solid var(--line);background:var(--bg);padding:1rem 1.1rem;border-radius:.3rem;margin:0 0 1.2rem}
+.msg small{display:block;color:var(--muted);font-weight:700;margin-bottom:.4rem}
+.msg p{margin:0;font-size:1.15rem}
+.choices{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.btn{font:inherit;font-weight:700;font-size:1.15rem;min-height:3.4rem;padding:.6rem 1rem;border-radius:.7rem;border:3px solid var(--ink);background:var(--btn);color:var(--btnink);cursor:pointer}
+.btn.alt{background:var(--card);color:var(--ink)}
+.fb{margin-top:1.2rem;padding:1rem 1.1rem;border-radius:.6rem;border:3px solid}
+.fb.good{background:var(--safe-bg);border-color:var(--safe)}
+.fb.bad{background:var(--warn-bg);border-color:var(--warn)}
+.fb strong{display:block;font-size:1.25rem;margin-bottom:.3rem}
+.fb p{margin-bottom:.8rem}
+.fb .btn{margin-top:.2rem}
+.score{font-size:1.4rem;font-weight:700}
+details{background:var(--card);border:2px solid var(--line);border-radius:.8rem;margin:0 0 .8rem}
+summary{cursor:pointer;font-weight:700;font-size:1.25rem;padding:1rem 1.1rem;min-height:3.4rem}
+details[open]{border-color:var(--ink)}
+details[open] summary{border-bottom:2px solid var(--line)}
+details ul{margin:0;padding:1rem 1.1rem 1rem 2.3rem}
+details li{margin-bottom:.7rem}
+.rules{display:grid;gap:.8rem}
+.rule{background:var(--safe-bg);border:3px solid var(--safe);border-radius:.8rem;padding:1rem 1.1rem}
+.rule b{display:block;font-size:1.3rem}
+.rule span{display:block}
+.help{background:var(--card);border:3px solid var(--ink);border-radius:1rem;padding:1.2rem}
+.help ol{padding-left:1.4rem;margin:0 0 1rem}
+.help li{margin-bottom:.6rem}
+.help a{font-weight:700;color:var(--ink)}
+footer{margin-top:3rem;border-top:2px solid var(--line);padding:1.2rem 0 2rem;color:var(--muted)}
+@media (max-width:30rem){h1{font-size:1.95rem}.choices{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top">Pause First</a>
+    <nav aria-label="Main">
+      <a href="#practice">Practice</a>
+      <a href="#lessons">Lessons</a>
+      <a href="#rules">3 rules</a>
+      <a href="#help">Need help?</a>
+    </nav>
+    <div class="size" role="group" aria-label="Text size">
+      Text size
+      <button type="button" data-s="18" aria-pressed="true" aria-label="Normal text">A</button>
+      <button type="button" data-s="22" aria-pressed="false" aria-label="Large text" style="font-size:1.2em">A</button>
+      <button type="button" data-s="26" aria-pressed="false" aria-label="Extra large text" style="font-size:1.45em">A</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+  <h1>Scammers need you to rush. So pause first.</h1>
+  <p class="lede">Short, plain lessons on staying safe on the phone, in your email, and on the internet. No jargon, no tests you can fail. Start by trying the practice below.</p>
+
+  <section id="practice" aria-labelledby="ph">
+    <h2 id="ph" style="margin-top:2rem">Practice: real or scam?</h2>
+    <p>Read each message, then tell us what you think. We'll explain the clues.</p>
+    <div class="quiz" id="quiz" aria-live="polite"></div>
+  </section>
+
+  <section id="lessons" aria-labelledby="lh">
+    <h2 id="lh">Five short lessons</h2>
+    <p>Tap a lesson to open it. Take them in any order.</p>
+
+    <details>
+      <summary>1. Phone calls that feel urgent</summary>
+      <ul>
+        <li><b>Hang up if you feel rushed.</b> The bank, Medicare, the IRS and Social Security will never threaten arrest or demand money on the spot.</li>
+        <li><b>Caller ID can be faked.</b> A call that shows your bank's name may not be your bank.</li>
+        <li><b>A "grandchild" in trouble?</b> Hang up and call your family member on the number you already have. Agree on a secret family code word ahead of time.</li>
+        <li><b>Only scammers ask for gift cards, wire transfers, cryptocurrency or cash pickup.</b> No real business or agency does.</li>
+        <li>It is polite to hang up. You do not owe a stranger an explanation.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>2. Emails and text messages</summary>
+      <ul>
+        <li><b>Don't tap links in messages you weren't expecting.</b> Instead, type the website address yourself or open the company's app.</li>
+        <li><b>Clues of a scam:</b> urgency ("act within 24 hours"), spelling mistakes, an odd sender address, or a request for a password, Social Security number or card number.</li>
+        <li><b>Don't reply to unknown texts</b>, not even "STOP". Replying tells them your number is real. Delete the text, or forward it to 7726 (SPAM) to report it.</li>
+        <li><b>Unexpected attachments</b> can hide harmful software. If you didn't expect it, don't open it.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>3. Passwords and sign-in codes</summary>
+      <ul>
+        <li><b>Use a few random words.</b> Something like <i>pine-teapot-river-lamp</i> is stronger and easier to remember than a short jumble of symbols.</li>
+        <li><b>Never reuse your email or bank password.</b> If one is stolen, the others stay safe.</li>
+        <li><b>A written notebook kept at home is fine.</b> A thief online can't read it. A password manager app is also a good choice.</li>
+        <li><b>Turn on two-step sign-in</b> for email and banking. You get a code on your phone when you sign in.</li>
+        <li><b>Never read that code to anyone who contacts you.</b> Anyone asking for it is a scammer.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>4. Shopping and banking online</summary>
+      <ul>
+        <li><b>Shop at stores you already know.</b> If a deal looks too good to be true, it usually is.</li>
+        <li><b>Use a credit card, not a debit card.</b> Credit cards usually offer stronger protection if something goes wrong.</li>
+        <li><b>"Your computer has a virus" pop-up?</b> Close the window or restart. Microsoft and Apple never put a phone number in a warning. Don't call it.</li>
+        <li><b>Check your statements</b> each month for charges you don't recognize.</li>
+        <li>Avoid banking on free public Wi-Fi at cafés and hotels.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>5. Updates and your devices</summary>
+      <ul>
+        <li><b>Install updates.</b> They fix security holes. Turn on automatic updates in your phone or computer settings.</li>
+        <li><b>Use a screen lock</b> (a PIN or fingerprint) on your phone and tablet.</li>
+        <li><b>Never let a stranger take control of your computer</b>, even if they say they are "from tech support".</li>
+        <li><b>Ask someone you trust</b> before installing a new app or program.</li>
+      </ul>
+    </details>
+  </section>
+
+  <section id="rules" aria-labelledby="rh">
+    <h2 id="rh">Three rules to remember</h2>
+    <div class="rules">
+      <div class="rule"><b>1. Slow down.</b><span>Urgency is the scammer's main tool. A real problem can wait ten minutes.</span></div>
+      <div class="rule"><b>2. Check another way.</b><span>Hang up, then call the number on your card, your statement, or the company's own website.</span></div>
+      <div class="rule"><b>3. Never pay with gift cards, wire transfers or crypto.</b><span>Those are the payments scammers ask for, because they can't be taken back.</span></div>
+    </div>
+  </section>
+
+  <section id="help" aria-labelledby="hh">
+    <h2 id="hh">If something already happened</h2>
+    <p>It is not your fault. Smart, careful people get caught every day, and acting quickly helps.</p>
+    <div class="help">
+      <ol>
+        <li><b>Stop talking</b> to the person. Don't send more money.</li>
+        <li><b>Call your bank or card company</b> using the number on the back of your card.</li>
+        <li><b>Change passwords</b> for any account you shared, starting with email.</li>
+        <li><b>Tell someone you trust</b>, such as a family member or friend.</li>
+        <li><b>Report it.</b> Reports help stop the scammers.</li>
+      </ol>
+      <p><b>Free help in the U.S.</b></p>
+      <p>National Elder Fraud Hotline: <a href="tel:18333728311">1-833-372-8311</a><br>
+      AARP Fraud Watch Helpline: <a href="tel:18779083360">1-877-908-3360</a><br>
+      Federal Trade Commission: <a href="tel:18773824357">1-877-382-4357</a> or ReportFraud.ftc.gov</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Pause First is a learning guide, not professional security or legal advice. Phone numbers are for the U.S.; please confirm them before calling.</div>
+</footer>
+
+<script>
+(function(){
+  var Q=[
+    {k:"Text message",f:"From: 29278",m:"USPS: Your package could not be delivered. Pay a $1.99 redelivery fee within 12 hours at usps-redelivery-help.com or it will be returned.",s:true,
+     w:"The post office doesn't text you to ask for a fee. Look at the web address: it isn't usps.com. The 12-hour deadline is there to rush you."},
+    {k:"Text message",f:"From: Dr. Patel's Office",m:"Reminder: you have an appointment Tuesday at 10:00 AM. To change it, please call the office number on your appointment card.",s:false,
+     w:"This looks fine. It's expected, there's no link, and it asks you to use a number you already have. If you did not have an appointment, ignore it."},
+    {k:"Phone call",f:"Caller ID: unknown",m:"\"Grandma? It's me. I'm in trouble, I was in an accident and need money for bail. Please don't tell Mom. Buy gift cards and read me the numbers.\"",s:true,
+     w:"This is the \"grandparent scam\". The secrecy, the panic and the gift cards are all warning signs. Hang up and call your grandchild on the number you already have."},
+    {k:"Pop-up on your computer",f:"Shows on screen",m:"WARNING: Your computer is infected! Do not turn it off. Call Microsoft Support at 1-800-555-0199 right now or your files will be deleted.",s:true,
+     w:"Microsoft never shows pop-ups like this. Close the window or restart the computer. Never call the number or let anyone connect to your computer."},
+    {k:"Text message",f:"From: your bank",m:"Fraud alert: did you make a $412.00 purchase at an electronics store? Reply YES or NO. We will never ask for your password. Questions? Call the number on the back of your card.",s:false,
+     w:"This looks like a real fraud alert. It has no link and tells you to use the number on your card. If you're unsure, call the bank yourself before answering."}
+  ];
+  var i=0,score=0,box=document.getElementById("quiz");
+  function esc(t){return t.replace(/&/g,"&amp;").replace(/</g,"&lt;")}
+  function show(){
+    var q=Q[i];
+    box.innerHTML='<div class="qhead"><span>Message '+(i+1)+' of '+Q.length+'</span><span>Score: '+score+'</span></div>'+
+      '<div class="msg"><small>'+esc(q.k)+' &middot; '+esc(q.f)+'</small><p>'+esc(q.m)+'</p></div>'+
+      '<div class="choices"><button class="btn" data-a="real">This looks real</button><button class="btn alt" data-a="scam">This is a scam</button></div><div id="fb"></div>';
+    box.querySelectorAll("[data-a]").forEach(function(b){b.onclick=function(){answer(b.dataset.a==="scam")}});
+  }
+  function answer(sayScam){
+    var q=Q[i],ok=(sayScam===q.s);if(ok)score++;
+    box.querySelectorAll("[data-a]").forEach(function(b){b.disabled=true});
+    var last=i===Q.length-1;
+    document.getElementById("fb").innerHTML='<div class="fb '+(ok?"good":"bad")+'"><strong>'+(ok?"Correct.":"Not quite.")+' This one is '+(q.s?"a scam.":"real.")+'</strong><p>'+q.w+'</p><button class="btn" id="nx">'+(last?"See my result":"Next message")+'</button></div>';
+    var n=document.getElementById("nx");n.focus();
+    n.onclick=function(){if(last){done()}else{i++;show()}};
+  }
+  function done(){
+    var msg=score===Q.length?"Perfect. You spotted every one.":score>=3?"Well done. You have a good eye for this.":"Good practice. The lessons below will help sharpen your eye.";
+    box.innerHTML='<p class="score">You got '+score+' of '+Q.length+'.</p><p>'+msg+' Remember: if a message makes you feel rushed or afraid, pause and check another way.</p><div class="choices"><button class="btn" id="again">Try again</button><a class="btn alt" href="#lessons" style="text-align:center;text-decoration:none;display:flex;align-items:center;justify-content:center">Read the lessons</a></div>';
+    document.getElementById("again").onclick=function(){i=0;score=0;show()};
+  }
+  show();
+
+  var btns=document.querySelectorAll(".size button");
+  function setSize(v,save){
+    document.documentElement.style.fontSize=v+"px";
+    btns.forEach(function(b){b.setAttribute("aria-pressed",b.dataset.s==String(v))});
+    if(save){try{localStorage.setItem("pf-size",v)}catch(e){}}
+  }
+  btns.forEach(function(b){b.onclick=function(){setSize(+b.dataset.s,true)}});
+  try{var s=localStorage.getItem("pf-size");if(s)setSize(+s,false)}catch(e){}
+})();
+</script>
+</body>
+</html>
