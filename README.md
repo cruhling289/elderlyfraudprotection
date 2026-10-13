@@ -31,14 +31,6 @@ There is nothing to install or build. The whole site is one HTML file.
 
 It also works offline. The only thing that won't load without internet is the Google Fonts typeface; the page falls back to Verdana or Tahoma.
 
-## Publish with GitHub Pages
-
-1. Make sure the page is named `index.html` and sits at the top level of the repository.
-2. On GitHub, go to **Settings → Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**.
-4. Select the `main` branch and the `/ (root)` folder, then click **Save**.
-5. After a minute or two, your site is live at `https://cruhling289.github.io/elderlyfraudprotection/`.
-
 ## Customize it
 
 Everything is in `index.html`.
@@ -87,6 +79,4 @@ Each practice message in `Q` looks like this:
 
 Suggestions are welcome, especially from older adults, caregivers and educators. Open an issue or pull request with new practice messages, clearer wording, or accessibility improvements.
 
-## License
 
-Add a license of your choice (for example, [MIT](https://choosealicense.com/licenses/mit/)) as a `LICENSE` file in the repository, and update this section to match.
